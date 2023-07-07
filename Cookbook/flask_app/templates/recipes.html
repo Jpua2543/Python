@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 class="d-flex justify-content-center">
+        Welcome, {{session['name']}}
+    </h1>
+    <p>
+        All posted recipes: 
+    </p>
+    <a href="/new_recipe">
+        create
+    </a>
+    <a href="/logout">
+        logout
+    </a>
+    <table class="table table-hover  table-borderless table-striped">
+        <thead>
+            <tr>
+                <th>
+                    Name
+                </th>
+                <th>
+                    Under
+                </th>
+                <th>
+                    Posted By
+                </th>
+                <th>
+                    Actions
+                </th>
+            </tr>
+        </thead>
+        {% for user in users %}
+        <tbody>
+            <tr>
+                <td>
+                    name<!-- {{user.id}} -->
+                </td>
+                <td>
+                    Under<!-- {{user.fullname}} -->
+                </td>
+                <td>
+                    Posted By<!-- {{user.email}} -->
+                </td>
+                <td>
+                    <a href="/user/readone/{{user.id}}">Show</a>
+                    <a href="/user/edit/{{user.id}}">Edit</a>
+                    <a href="/user/destroy/{{user.id}}">Delete</a>
+                </td>
+            </tr>
+        </tbody>
+        {% endfor %}
+    </table>
+    <a href="/create">
+        Add a New User
+    </a>
+
+</body>
+</html>
