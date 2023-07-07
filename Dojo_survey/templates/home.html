@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body>
+    <h1 class="d-flex justify-content-center">
+        Dojo Survey
+    </h1>
+    <div>
+        <form action="/data" method="post">
+            <input type="text" name="name" class="form-control" placeholder="Name here">
+            <div class="form-group container">
+                <label for="location">
+                    Dojo Location:
+                </label>
+                <select name="location" id="">
+                    <option value="California" name="location">
+                        California
+                    </option>
+                    <option value="Chicago" name="location">
+                        Chicago
+                    </option>
+                    <option value="Burbank" name="location">
+                        Burbank
+                    </option>
+                </select>
+            </div>
+            <div class="form-group container">
+                <label for="language">
+                    Favorite Language:
+                </label>
+                <select name="language" id="">
+                    <option value="Python" name="language">
+                        Python
+                    </option>
+                    <option value="JavaScript" name="language">
+                        JavaScript
+                    </option>
+                    <option value="Java" name="language">
+                        Java
+                    </option>
+                </select>
+            </div>
+            <div class="form-group container">
+                <label for="comment" >
+                    Comments:
+                </label>
+                <textarea  id="" cols="30" rows="5" name="comment">
+                </textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">
+                Submit!
+            </button>
+        </form>
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+</html>
